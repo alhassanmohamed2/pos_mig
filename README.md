@@ -23,5 +23,8 @@ Laravel Migrations Using SQL Query and composer package that take the SQL Query 
 php artisan migrate:generate
 ```
 
+## Database ERD
+
+![App Screenshot](./ERD.svg)
  
 
