@@ -14,7 +14,7 @@ CREATE TABLE `material` (
 );
 
 CREATE TABLE `pruchases` (
-  `id` int,
+  `id` int AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(255),
   `price` float,
   `qty` int,
@@ -56,7 +56,7 @@ CREATE TABLE `permission` (
 );
 
 CREATE TABLE `roles_ permission` (
-  `id` int,
+  `id` int AUTO_INCREMENT PRIMARY KEY,
   `role_id` int,
   `permission_id` int,
   FOREIGN KEY (`permission_id`) REFERENCES `permission`(`id`),
@@ -64,7 +64,7 @@ CREATE TABLE `roles_ permission` (
 );
 
 CREATE TABLE `addons` (
-  `id` int,
+  `id` int AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(255),
   `is_available` int,
   `price` float
@@ -100,12 +100,12 @@ CREATE TABLE `customers` (
 );
 
 CREATE TABLE `attributs` (
-  `id` int,
+  `id` int AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(255)
 );
 
 CREATE TABLE `tables_reservation` (
-  `id` int,
+  `id` int AUTO_INCREMENT PRIMARY KEY,
   `table_id` int,
   `customer_id` int,
   `start_time` datetime,
@@ -131,7 +131,7 @@ CREATE TABLE `orders` (
 );
 
 CREATE TABLE `outside_orders` (
-  `id` int,
+  `id` int AUTO_INCREMENT PRIMARY KEY,
   `order_id` int,
   `delivery_man_id` int,
   `zone_id` int,
@@ -157,7 +157,7 @@ CREATE TABLE `items` (
 );
 
 CREATE TABLE `items_materials` (
-  `id` int,
+  `id` int AUTO_INCREMENT PRIMARY KEY,
   `material_id` int,
   `item_id` int,
   FOREIGN KEY (`material_id`) REFERENCES `material`(`id`),
