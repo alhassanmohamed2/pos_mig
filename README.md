@@ -24,6 +24,7 @@ php artisan migrate:generate
 ```
 
 ## Database ERD
+[ERD](https://lucid.app/lucidchart/a20318ee-e431-4244-bb5c-37ebf32c563c/edit?viewport_loc=1401%2C-24%2C3717%2C2325%2C0_0&invitationId=inv_af0fe630-53fd-41fa-947f-da69de711198)
 
 ![App Screenshot](./ERD.svg)
  
