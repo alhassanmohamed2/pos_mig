@@ -8,7 +8,7 @@ Laravel Migrations Using SQL Query and composer package that take the SQL Query 
 
 - Copy the SQL Query from the migration.sql file
 
-- Create a database with any name int phpMyAdmin
+- Create a database with any name in phpMyAdmin
 - Paste the SQL query in it and run it
 - Configure your database with you Laravel project
 - Install the following package [laravel-migrations-generator](https://github.com/kitloong/laravel-migrations-generator)
