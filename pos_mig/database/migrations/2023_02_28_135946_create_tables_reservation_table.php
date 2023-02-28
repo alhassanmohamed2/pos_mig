@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('items_materials', function (Blueprint $table) {
+        Schema::create('tables_reservation', function (Blueprint $table) {
             $table->comment('');
-            $table->integer('id')->nullable();
-            $table->integer('material_id')->nullable()->index('material_id');
-            $table->integer('item_id')->nullable()->index('item_id');
+            $table->integer('id', true);
+            $table->integer('table_id')->nullable()->index('table_id');
+            $table->integer('customer_id')->nullable()->index('customer_id');
+            $table->dateTime('start_time')->nullable();
+            $table->dateTime('end_time')->nullable();
         });
     }
 
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('items_materials');
+        Schema::dropIfExists('tables_reservation');
     }
 };

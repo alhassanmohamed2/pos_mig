@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('addons', function (Blueprint $table) {
+        Schema::create('attributs', function (Blueprint $table) {
             $table->comment('');
-            $table->integer('id')->nullable();
+            $table->integer('id', true);
             $table->string('name')->nullable();
-            $table->integer('is_available')->nullable();
-            $table->float('price', 10, 0)->nullable();
         });
     }
 
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('addons');
+        Schema::dropIfExists('attributs');
     }
 };

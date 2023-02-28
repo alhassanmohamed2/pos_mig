@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('pruchases', function (Blueprint $table) {
             $table->comment('');
-            $table->integer('id')->nullable();
+            $table->integer('id', true);
             $table->string('name')->nullable();
             $table->float('price', 10, 0)->nullable();
             $table->integer('qty')->nullable();

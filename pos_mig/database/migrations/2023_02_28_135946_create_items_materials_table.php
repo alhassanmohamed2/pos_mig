@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('attributs', function (Blueprint $table) {
+        Schema::create('items_materials', function (Blueprint $table) {
             $table->comment('');
-            $table->integer('id')->nullable();
-            $table->string('name')->nullable();
+            $table->integer('id', true);
+            $table->integer('material_id')->nullable()->index('material_id');
+            $table->integer('item_id')->nullable()->index('item_id');
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('attributs');
+        Schema::dropIfExists('items_materials');
     }
 };

@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('roles_ permission', function (Blueprint $table) {
+        Schema::create('outside_orders', function (Blueprint $table) {
             $table->comment('');
-            $table->integer('id')->nullable();
-            $table->integer('role_id')->nullable()->index('role_id');
-            $table->integer('permission_id')->nullable()->index('permission_id');
+            $table->integer('id', true);
+            $table->integer('order_id')->nullable()->index('order_id');
+            $table->integer('delivery_man_id')->nullable()->index('delivery_man_id');
+            $table->integer('zone_id')->nullable()->index('zone_id');
         });
     }
 
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles_ permission');
+        Schema::dropIfExists('outside_orders');
     }
 };

@@ -136,7 +136,8 @@ CREATE TABLE `outside_orders` (
   `delivery_man_id` int,
   `zone_id` int,
   FOREIGN KEY (`zone_id`) REFERENCES `zones`(`id`),
-  FOREIGN KEY (`order_id`) REFERENCES `orders`(`id`)
+  FOREIGN KEY (`order_id`) REFERENCES `orders`(`id`),
+  FOREIGN KEY (`delivery_man_id`) REFERENCES `employee`(`id`)
 );
 
 

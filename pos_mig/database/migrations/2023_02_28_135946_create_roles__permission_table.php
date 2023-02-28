@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tables_reservation', function (Blueprint $table) {
+        Schema::create('roles_ permission', function (Blueprint $table) {
             $table->comment('');
-            $table->integer('id')->nullable();
-            $table->integer('table_id')->nullable()->index('table_id');
-            $table->integer('customer_id')->nullable()->index('customer_id');
-            $table->dateTime('start_time')->nullable();
-            $table->dateTime('end_time')->nullable();
+            $table->integer('id', true);
+            $table->integer('role_id')->nullable()->index('role_id');
+            $table->integer('permission_id')->nullable()->index('permission_id');
         });
     }
 
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tables_reservation');
+        Schema::dropIfExists('roles_ permission');
     }
 };

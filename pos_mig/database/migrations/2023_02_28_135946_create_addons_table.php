@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('outside_orders', function (Blueprint $table) {
+        Schema::create('addons', function (Blueprint $table) {
             $table->comment('');
-            $table->integer('id')->nullable();
-            $table->integer('order_id')->nullable()->index('order_id');
-            $table->integer('delivery_man_id')->nullable();
-            $table->integer('zone_id')->nullable()->index('zone_id');
+            $table->integer('id', true);
+            $table->string('name')->nullable();
+            $table->integer('is_available')->nullable();
+            $table->float('price', 10, 0)->nullable();
         });
     }
 
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('outside_orders');
+        Schema::dropIfExists('addons');
     }
 };
